@@ -1,0 +1,62 @@
+body {
+    max-width: 960px;
+    margin: 0 auto;
+    font-size: 1.8rem;
+    padding: 2rem;
+}
+
+* {
+    font-family: 'Roboto', cursive;
+}
+
+#drop-zone {
+    position: relative;
+
+    width: 100%;
+    min-height: 200px;
+    border: 4px dashed #ccc;
+    border-radius: 1em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#drop-zone.over {
+    border-color: #93b8ff;
+    background: #f0f4fb;
+}
+
+#drop-zone .spinner {
+    position: absolute;
+    left: 1em;
+    top: 1em;
+
+    z-index: 2;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+
+    border: 4px dashed #333;
+    border-radius: 50%;
+
+    animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+#drop-zone img {
+    cursor: pointer;
+
+    width: auto;
+    height: auto;
+    max-height: 80vh;
+}
