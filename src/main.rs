@@ -188,7 +188,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
         });
     app.at("/images/:name")
         .get(|req: Request<State>| async { serve_image(req).await.for_tide() });
-    app.listen("localhost:3000").await?;
+    app.listen("0.0.0.0:3000").await?;
     Ok(())
 }
 
